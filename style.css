@@ -1,10 +1,4 @@
-.attribution {
-    font-size: 11px;
-    text-align: center;
-  }
-  .attribution a {
-    color: hsl(228, 45%, 44%);
-  }
+
 
   body{
      margin: 50px 100px ;
@@ -30,7 +24,7 @@
       font-weight: 400;
   }
 .eg{
-    background-color:hsl(303, 10%, 53%) ;
+    background-color:hsl(300, 24%, 96%) ;
     padding: 10px;
     border-radius: 5px;
     font-weight: 700;
@@ -59,6 +53,12 @@
    margin: 10px;
 
 }
+.person2{
+    transform: translateY(15px);
+}
+.person3{
+    transform: translateY(30px);
+}
 .customer-voices h4{
     color: hsl(0, 0%, 100%);
     margin-bottom: 0;
@@ -67,3 +67,12 @@
     color:hsl(333, 80%, 67%) ;
     margin-top: 0;
 }
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 80px;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
