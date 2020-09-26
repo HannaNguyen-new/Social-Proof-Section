@@ -1,6 +1,6 @@
  body{
-     margin: 50px 50px ;
-     font-size: 15px;
+     margin: 2rem ;
+     font-size: 1rem;
      font-family: 'Spartan', sans-serif; 
      background-image: url("social-proof-section-master/images/bg-pattern-top-desktop.svg"),
                        url("social-proof-section-master/images/bg-pattern-bottom-desktop.svg");
@@ -8,7 +8,41 @@
      background-repeat: no-repeat, no-repeat;
    
   }
+  @media only screen and (max-width:480px){
+      body{
+         display: flex;
+         flex-wrap: wrap;
+         margin: 0.5rem;
+       
+      }
+      body .accomplishment{
+          display: flex;
+          flex-direction: column;
+      }
+     
+      body .second,
+      body .third{
+          left: 0;
+      }
+    
+      body.eg{
+       margin-left: 0rem;
+        
+      }
+      body span{
+          left: 35%;
+      }
+      body .customer-voices{
+          flex-direction: column;
+      }
+      body .person1,
+      body .person2,
+      body .person3{
+          margin: 0;
+      }
+  }
   /* First half:accomplishment section*/
+  /*intro class*/
   .accomplishment{
       display: flex;
       justify-content: space-around;
@@ -16,26 +50,42 @@
   }
   .intro h1{
       font-weight: 700;
-      font-size: 30px;
+      font-size: 2rem;
   }
   .intro p{
       color:hsl(303, 10%, 53%);
       font-weight: 400;
   }
-.eg{
-    background-color:hsl(300, 24%, 96%) ;
-    padding: 10px;
-    border-radius: 5px;
-    font-weight: 700;
+  /*example class*/
+  .container{
+      background-color:hsl(300, 24%, 96%) ;
+      padding: 0.5rem 4rem ;
+      border-radius: 0.5rem;
+      font-weight: 700;
+      margin: 1rem;
+      position: relative;
+  }
+.second{
+    left: 2rem;
+}    
+.third{
+    left: 4rem;
 }
+
+.eg{
+    margin-left: 5rem;
+}
+
 /*add stars*/
-.eg::before{
-    content: " ";
-    background: url("social-proof-section-master/images/icon-star.svg");
-    width:17px;
-    height: 16px;
+span{
+    background-image: url("social-proof-section-master/images/icon-star.svg");
+    min-width: 6rem;
+    min-height: 1rem;
+    background-repeat: space ;
     position: absolute;
-    background-repeat: repeat-x;
+    z-index: 5;
+    top: 1.5rem;
+    left: 1.5rem;
 }
 
 /*Second half:customer voices section*/
@@ -48,22 +98,22 @@
 .person3{
    background-color:hsl(300, 43%, 22%) ;
    color:hsl(0, 0%, 100%) ;
-   border-radius: 5px;
-   padding: 0 30px 20px 30px;
-   margin: 15px;
+   border-radius: 0.5rem;
+   padding: 1rem 2rem;
+   margin: 1rem;
 
 }
 .person2{
-    transform: translateY(10px);
+    transform: translateY(1rem); 
 }
 .person3{
-    transform: translateY(30px);
+    transform: translateY(2rem);
 }
 /*text styling*/
 .buyer-info{
     display: inline-block;
-    margin: 0 10px;  
-    transform: translateY(10px) ;
+    margin: 0 1rem;  
+    transform: translateY(1rem) ;
 }
 .customer-voices h4{
     color: hsl(0, 0%, 100%);
@@ -77,17 +127,17 @@
 /*customers' img styling*/
 img{
     clip-path: circle(1.5rem);
-    transform: translateY(20px);
-    width: 50px;
+    transform: translateY(1.5rem);
+    width: 3rem;
     height: auto;
  
 }
 
 /*credit*/
 .attribution {
-    font-size: 11px;
+    font-size: 0.8rem;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 4rem;
   }
   .attribution a {
     color: hsl(228, 45%, 44%);
