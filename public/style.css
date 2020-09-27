@@ -2,16 +2,19 @@
      margin: 2rem ;
      font-size: 1rem;
      font-family: 'Spartan', sans-serif; 
-     background-image: url("social-proof-section-master/images/bg-pattern-top-desktop.svg"),
-                       url("social-proof-section-master/images/bg-pattern-bottom-desktop.svg");
+     background-image: url("images/bg-pattern-top-desktop.svg"),
+                       url("images/bg-pattern-bottom-desktop.svg");
      background-position: top left, bottom right;                  
      background-repeat: no-repeat, no-repeat;
+     word-wrap: break-word;
    
   }
   @media only screen and (max-width:480px){
       body{
          display: flex;
-         flex-wrap: wrap;
+         flex-direction: column;
+         align-content: center;
+         justify-content: center;
          margin: 0.5rem;
        
       }
@@ -20,17 +23,25 @@
           flex-direction: column;
       }
      
+      body .intro{
+          width: 100%;
+          text-align: center;
+      }
+      body .container{
+          padding: 1rem 1rem;
+      }
       body .second,
       body .third{
           left: 0;
       }
-    
-      body.eg{
-       margin-left: 0rem;
-        
+      body .eg{
+          margin: 1.5rem 0 0 0 ;
+          text-align: center;
       }
+   
       body span{
-          left: 35%;
+            top: 1rem;
+            left: 35%;
       }
       body .customer-voices{
           flex-direction: column;
@@ -39,6 +50,8 @@
       body .person2,
       body .person3{
           margin: 0;
+          padding: 0.5rem 1rem;
+       
       }
   }
   /* First half:accomplishment section*/
@@ -47,14 +60,18 @@
       display: flex;
       justify-content: space-around;
       color: hsl(300, 43%, 22%);
-  }
-  .intro h1{
-      font-weight: 700;
-      font-size: 2rem;
-  }
-  .intro p{
-      color:hsl(303, 10%, 53%);
-      font-weight: 400;
+    }
+    .intro{
+        width: 50%;
+
+    }
+    .intro h1{
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    .intro p{
+        color:hsl(303, 10%, 53%);
+        font-weight: 400;
   }
   /*example class*/
   .container{
@@ -63,7 +80,7 @@
       border-radius: 0.5rem;
       font-weight: 700;
       margin: 1rem;
-      position: relative;
+      position: relative; /*relative for span*/
   }
 .second{
     left: 2rem;
@@ -78,11 +95,11 @@
 
 /*add stars*/
 span{
-    background-image: url("social-proof-section-master/images/icon-star.svg");
+    background-image: url("images/icon-star.svg");
     min-width: 6rem;
     min-height: 1rem;
     background-repeat: space ;
-    position: absolute;
+    position: absolute; /*relative to container*/
     z-index: 5;
     top: 1.5rem;
     left: 1.5rem;
