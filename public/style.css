@@ -9,6 +9,15 @@
      word-wrap: break-word;
    
   }
+  @media only screen and (max-width:965px){
+      body .intro{
+          width: 70%;
+      }
+      body .intro h1,
+      body .intro p{
+          width:100%;
+      }
+  }
   @media only screen and (max-width:480px){
       body{
          display: flex;
@@ -29,6 +38,10 @@
           width: 100%;
           text-align: center;
       }
+      body .intro h1,
+      body .intro p{
+          width: 100%;
+      }
       body .container{
           padding: 1rem 1rem;
       }
@@ -42,8 +55,9 @@
       }
    
       body span{
-            top: 1rem;
-            left: 35%;
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
       }
       body .customer-voices{
           flex-direction: column;
@@ -101,10 +115,11 @@
 
 /*add stars*/
 span{
+    width: 20%;
+    height: 1rem;
     background-image: url("images/icon-star.svg");
-    min-width: 6rem;
-    min-height: 1rem;
-    background-repeat: space ;
+    background-size: 20%;
+    background-repeat: repeat space;
     position: absolute; /*relative to container*/
     z-index: 5;
     top: 1.5rem;
